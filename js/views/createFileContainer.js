@@ -5,7 +5,7 @@ export default function createFileContainer(elementParent) {
   const fileContainer = createHtmlElement('div', fileContainerAttributes);
   elementParent.appendChild(fileContainer);
 
-  const textContainerAttributes = { id: 'text-container' };
+  const textContainerAttributes = { id: 'text-initial', className: 'text-container' };
   const textContainer = createHtmlElement('textarea', textContainerAttributes);
   fileContainer.appendChild(textContainer);
 

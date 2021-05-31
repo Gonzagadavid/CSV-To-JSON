@@ -5,7 +5,7 @@ export default function createConvertedContainer(elementParent) {
   const convertedContainer = createHtmlElement('div', convertedContainerAttributes);
   elementParent.appendChild(convertedContainer);
 
-  const convertedTextAttributes = { id: 'converted-text' };
+  const convertedTextAttributes = { id: 'converted-text', className: 'text-container' };
   const convertedText = createHtmlElement('textarea', convertedTextAttributes);
   convertedContainer.appendChild(convertedText);
 

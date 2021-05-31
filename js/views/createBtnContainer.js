@@ -1,4 +1,5 @@
 import createHtmlElement from '../functions/createHtmlElement.js';
+import toJson from '../functions/toJson.js';
 
 export default function createBtnContainer(elementParent) {
   const btnContainerAttributes = { className: 'btn-container container' };
@@ -8,6 +9,7 @@ export default function createBtnContainer(elementParent) {
   const btnToJsonAttributes = {
     className: 'btn-converts',
     innerHTML: 'to JSON >',
+    onclick: toJson,
   };
   const btnToJson = createHtmlElement('button', btnToJsonAttributes);
   btnContainer.appendChild(btnToJson);
