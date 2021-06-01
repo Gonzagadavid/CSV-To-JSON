@@ -1,4 +1,5 @@
 import createHtmlElement from '../functions/createHtmlElement.js';
+import toCsv from '../functions/toCsv.js';
 import toJson from '../functions/toJson.js';
 
 export default function createBtnContainer(elementParent) {
@@ -17,6 +18,7 @@ export default function createBtnContainer(elementParent) {
   const btnToCsvAttributes = {
     className: 'btn-converts',
     innerHTML: 'to CSV >',
+    onclick: toCsv,
   };
   const btnToCsv = createHtmlElement('button', btnToCsvAttributes);
   btnContainer.appendChild(btnToCsv);
