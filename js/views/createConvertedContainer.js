@@ -1,3 +1,4 @@
+import copyConverted from '../functions/copyConverted.js';
 import createHtmlElement from '../functions/createHtmlElement.js';
 
 export default function createConvertedContainer(elementParent) {
@@ -20,6 +21,7 @@ export default function createConvertedContainer(elementParent) {
   const btnCopyAttributes = {
     className: 'btn-copy',
     innerHTML: 'Copy',
+    onclick: copyConverted,
   };
   const btnCopy = createHtmlElement('button', btnCopyAttributes);
   btnConvertedContainer.appendChild(btnCopy);

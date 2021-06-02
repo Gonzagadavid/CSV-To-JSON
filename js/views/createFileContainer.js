@@ -1,4 +1,5 @@
 import createHtmlElement from '../functions/createHtmlElement.js';
+import renderText from '../functions/renderText.js';
 
 export default function createFileContainer(elementParent) {
   const fileContainerAttributes = { className: 'file-container container' };
@@ -17,6 +18,7 @@ export default function createFileContainer(elementParent) {
     type: 'file',
     class: 'upload-btn',
     innerHTML: 'Upload File',
+    onchange: renderText,
   };
   const uploadBtn = createHtmlElement('input', uploadBtnAttributes);
   fileContainer.appendChild(uploadBtn);
