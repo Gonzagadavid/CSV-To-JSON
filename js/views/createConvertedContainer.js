@@ -1,5 +1,6 @@
 import copyConverted from '../functions/copyConverted.js';
 import createHtmlElement from '../functions/createHtmlElement.js';
+import downloadFile from '../functions/downloadFile.js';
 
 export default function createConvertedContainer(elementParent) {
   const convertedContainerAttributes = { className: 'converted-container container' };
@@ -29,6 +30,7 @@ export default function createConvertedContainer(elementParent) {
   const btnDownloadAttributes = {
     className: 'btn-download',
     innerHTML: 'Download',
+    onclick: downloadFile,
   };
   const btnDownload = createHtmlElement('button', btnDownloadAttributes);
   btnConvertedContainer.appendChild(btnDownload);

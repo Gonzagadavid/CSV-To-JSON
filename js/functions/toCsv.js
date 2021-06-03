@@ -1,3 +1,4 @@
+import objectFile from '../index.js';
 import checkJson from './checkJson.js';
 
 export default function toCsv() {
@@ -10,4 +11,5 @@ export default function toCsv() {
   const csvText = `${keys}${values}`;
   const convertedText = document.getElementById('converted-text');
   convertedText.value = csvText;
+  objectFile.format = 'csv';
 }
