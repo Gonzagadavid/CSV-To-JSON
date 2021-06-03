@@ -10,13 +10,14 @@ export default function createFileContainer(elementParent) {
     id: 'text-initial',
     className: 'text-container',
     spellcheck: false,
+    wrap: 'off',
   };
   const textContainer = createHtmlElement('textarea', textContainerAttributes);
   fileContainer.appendChild(textContainer);
 
   const uploadBtnAttributes = {
     type: 'file',
-    class: 'upload-btn',
+    className: 'upload-btn',
     innerHTML: 'Upload File',
     onchange: renderText,
   };

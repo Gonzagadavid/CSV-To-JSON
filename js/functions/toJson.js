@@ -12,7 +12,7 @@ export default function toJson() {
       return object;
     }, {})
   );
-  const textJson = JSON.stringify(arrayObjects);
+  const textJson = JSON.stringify(arrayObjects).replace(/},/g, '},\r\n');
   const convertedText = document.getElementById('converted-text');
   convertedText.value = textJson;
   objectFile.format = 'json';

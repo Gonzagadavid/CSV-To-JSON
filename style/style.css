@@ -2,15 +2,22 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
+  background-color: black;
 }
 
+
+
 #content {
-  width: 100%;
+  margin: auto;
+  width: 92%;
   height: 100%;
   display: flex;
   justify-content: space-around;
- 
-  background-color: rgb(54, 144, 223);
+  background-image: url('../images/jason.jpg');
+}
+
+#converted-text::selection {
+  background-color: transparent;
 }
 
 .container {
@@ -19,17 +26,46 @@ body {
   justify-content: center;
   height: 100%;
   width: 40%;
-  background-color: blueviolet;
 }
 
 .btn-container {
   width: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-converts {
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(90, 4, 4, 0.7);
 }
 
 .text-container {
   height: 70%;
   width: 100%;
   resize: none;
-  overflow-wrap:normal;
+  overflow: visible;
   line-height: 1.5;
+  background-color: rgba(23, 23, 23, 0.5);
+  background-size: cover;
+  border: none;
+  color: white;
+}
+
+.text-container:focus {
+  border: none;
+  outline: none;
+}
+
+.upload-btn::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+.upload-btn::-webkit-file-upload-button,button {
+  background-color: rgb(145, 8, 8);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

@@ -11,6 +11,8 @@ export default function createConvertedContainer(elementParent) {
     id: 'converted-text',
     className: 'text-container',
     spellcheck: false,
+    wrap: 'off',
+    readOnly: true,
   };
   const convertedText = createHtmlElement('textarea', convertedTextAttributes);
   convertedContainer.appendChild(convertedText);
@@ -38,6 +40,7 @@ export default function createConvertedContainer(elementParent) {
   const btnTrashAttributes = {
     className: 'btn-trash',
     innerHTML: 'Clear',
+    onclick: () => (convertedText.value = ''),
   };
   const btnTrash = createHtmlElement('button', btnTrashAttributes);
   btnConvertedContainer.appendChild(btnTrash);

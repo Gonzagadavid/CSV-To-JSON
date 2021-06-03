@@ -1,11 +1,9 @@
 import objectFile from '../index.js';
 
-function download(filename, text, format) {
+function download(fileName, text, format) {
   const element = document.createElement('a');
-
-  element.setAttribute('href', `data:text/${format};charset=utf-8,` + encodeURIComponent(text));
-  element.setAttribute('download', filename);
-
+  element.href = `data:text/${format};charset=utf-8,${encodeURIComponent(text)}`; // + encodeURIComponent(text)
+  element.download = fileName;
   element.style.display = 'none';
   document.body.appendChild(element);
 
