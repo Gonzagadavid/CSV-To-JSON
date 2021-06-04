@@ -58,14 +58,23 @@ body {
   outline: none;
 }
 
-.upload-btn::-webkit-textfield-decoration-container {
+.upload-btn{
   display: none;
 }
 
-.upload-btn::-webkit-file-upload-button,button {
-  background-color: rgb(145, 8, 8);
+label,button {
+  /* background-color: rgb(145, 8, 8); */
   color: white;
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(90, 4, 4, 0.7);
+}
+
+label {
+  margin: 20px;
 }

@@ -14,13 +14,15 @@ export default function createFileContainer(elementParent) {
   };
   const textContainer = createHtmlElement('textarea', textContainerAttributes);
   fileContainer.appendChild(textContainer);
-
+  const label = createHtmlElement('label', { htmlFor: 'upload', innerHTML: 'UPLOAD' });
   const uploadBtnAttributes = {
     type: 'file',
+    id: 'upload',
     className: 'upload-btn',
     innerHTML: 'Upload File',
     onchange: renderText,
   };
   const uploadBtn = createHtmlElement('input', uploadBtnAttributes);
-  fileContainer.appendChild(uploadBtn);
+  label.appendChild(uploadBtn);
+  fileContainer.appendChild(label);
 }
