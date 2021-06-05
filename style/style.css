@@ -5,8 +5,6 @@ body {
   background-color: black;
 }
 
-
-
 #content {
   margin: auto;
   width: 92%;
@@ -14,6 +12,7 @@ body {
   display: flex;
   justify-content: space-around;
   background-image: url('../images/jason.jpg');
+  background-repeat: no-repeat;
 }
 
 #converted-text::selection {
@@ -26,19 +25,13 @@ body {
   justify-content: center;
   height: 100%;
   width: 40%;
+  font-family: monospace;
 }
 
 .btn-container {
   width: 10%;
   display: flex;
   justify-content: space-around;
-}
-
-.btn-converts {
-  border-radius: 50%;
-  font-size: 20px;
-  padding: 10px;
-  background-color: rgba(90, 4, 4, 0.7);
 }
 
 .text-container {
@@ -51,6 +44,12 @@ body {
   background-size: cover;
   border: none;
   color: white;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.text-container::selection {
+  background-color: rgba(90, 4, 4, 0.7);
 }
 
 .text-container:focus {
@@ -62,8 +61,71 @@ body {
   display: none;
 }
 
+.btn-converted-container {
+  display:flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.erro-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 30%;
+  background-color: rgba(23, 23, 23, 0.8);
+  color: red;
+  box-shadow: 0 0 30px white ;
+  font-family: evil;
+  font-size: 25px;
+
+}
+
+.copy-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 30%;
+  font-size: 35px;
+  background-color: rgba(23, 23, 23, 0.8);
+  color: red;
+  font-family: evil;
+  width: 300px;
+  box-shadow: 0 0 30px white ;
+
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  opacity: 70%;
+  height: 8%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-family: evil;
+}
+
+.foot i {
+  color: red;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+.text-container::-webkit-scrollbar {
+  background-color: rgba(23, 23, 23, 0.5);
+}
+
+.text-container::-webkit-scrollbar-thumb {
+  background-color: rgba(90, 4, 4, 0.7);
+}
+
 label,button {
-  /* background-color: rgb(145, 8, 8); */
   color: white;
   border: none;
   outline: none;
@@ -73,8 +135,14 @@ label,button {
   padding: 10px;
   text-align: center;
   background-color: rgba(90, 4, 4, 0.7);
+  font-family: evil;
 }
 
 label {
   margin: 20px;
+}
+
+@font-face {
+  font-family: evil;
+  src: url('../fonts/evil_bunny/Evil\ Bunny.ttf');
 }

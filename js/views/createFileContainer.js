@@ -14,7 +14,7 @@ export default function createFileContainer(elementParent) {
   };
   const textContainer = createHtmlElement('textarea', textContainerAttributes);
   fileContainer.appendChild(textContainer);
-  const label = createHtmlElement('label', { htmlFor: 'upload', innerHTML: 'UPLOAD' });
+  const label = createHtmlElement('label', { htmlFor: 'upload', innerHTML: '<i class="fas fa-upload"></i> UPLOAD' });
   const uploadBtnAttributes = {
     type: 'file',
     id: 'upload',

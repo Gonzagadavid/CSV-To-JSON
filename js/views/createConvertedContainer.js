@@ -23,7 +23,7 @@ export default function createConvertedContainer(elementParent) {
 
   const btnCopyAttributes = {
     className: 'btn-copy',
-    innerHTML: 'Copy',
+    innerHTML: '<i class="fas fa-copy"></i> Copy',
     onclick: copyConverted,
   };
   const btnCopy = createHtmlElement('button', btnCopyAttributes);
@@ -31,7 +31,7 @@ export default function createConvertedContainer(elementParent) {
 
   const btnDownloadAttributes = {
     className: 'btn-download',
-    innerHTML: 'Download',
+    innerHTML: '<i class="fas fa-download"></i> Download',
     onclick: downloadFile,
   };
   const btnDownload = createHtmlElement('button', btnDownloadAttributes);
@@ -39,7 +39,7 @@ export default function createConvertedContainer(elementParent) {
 
   const btnTrashAttributes = {
     className: 'btn-trash',
-    innerHTML: 'Clear',
+    innerHTML: '<i class="fas fa-trash"></i> Clear',
     onclick: () => (convertedText.value = ''),
   };
   const btnTrash = createHtmlElement('button', btnTrashAttributes);

@@ -9,7 +9,7 @@ export default function createBtnContainer(elementParent) {
 
   const btnToJsonAttributes = {
     className: 'btn-converts',
-    innerHTML: 'to JSON >',
+    innerHTML: 'to JSON <i class="fas fa-angle-double-right"></i>',
     onclick: toJson,
   };
   const btnToJson = createHtmlElement('button', btnToJsonAttributes);
@@ -17,7 +17,7 @@ export default function createBtnContainer(elementParent) {
 
   const btnToCsvAttributes = {
     className: 'btn-converts',
-    innerHTML: 'to CSV >',
+    innerHTML: 'to CSV <i class="fas fa-angle-double-right"></i>',
     onclick: toCsv,
   };
   const btnToCsv = createHtmlElement('button', btnToCsvAttributes);

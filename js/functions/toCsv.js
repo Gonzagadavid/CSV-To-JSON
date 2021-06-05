@@ -1,9 +1,10 @@
 import objectFile from '../index.js';
+import erroMessage from '../views/erroMessage.js';
 import checkJson from './checkJson.js';
 
 export default function toCsv() {
   const textJson = document.getElementById('text-initial').value;
-  if (!checkJson(textJson)) return alert('o arquivo inserido não está no formato JSON');
+  if (!checkJson(textJson)) return erroMessage('O arquivo inserido não está no formato JSON');
   let arrObjects = JSON.parse(textJson);
   if (!Array.isArray(arrObjects)) arrObjects = [arrObjects];
   const keys = `${Object.keys(arrObjects[0]).join(',')}\n`;
